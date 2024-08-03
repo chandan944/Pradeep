@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    #calculato{
+
+        width: 400px;
+        background: #350303;
+        border-radius: 10px;
+        align-items: center;
+        display: block;
+        flex-direction: column;
+    }
+    #inp{margin: 1px;
+        width: 390px;
+        height: 120px;
+        border-radius: px;
+        padding-top: 5px;
+        background: #3d3939;
+        border-radius: 5px;
+        font-size: 70px;
+      
+
+        
+    }
+    #key button{
+        height: 97px;
+        width: 97px;
+        font-size: 40px;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+
+       
+    }
+#one{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+#two{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+#three{ 
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+#four{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+#five{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+#six{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+#seven{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+#eight{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+#nine{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+#zero{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+#sub{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background:yellow;
+}
+#sum{ height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background:yellow;}
+#div{ height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background:yellow;
+   
+}
+#multi{ height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background:yellow;}
+#ans{ height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background:yellow;}
+#clc{ height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background:yellow;}
+    
+</style>
+<body>
+    <div id="calculato">
+        <input type="text" id="inp" readonly>
+        <div id="key">
+            <button onclick="appendTomain(`1`)"  id="one">1</button>
+            <button onclick="appendTomain(`2`)"  id="two">
+                2
+            </button>
+            <button onclick="appendTomain(`3`)"  id="three">3</button>
+            <button onclick="appendTomain(`4`)"  id="four">4</button>
+            <button onclick="appendTomain(`5`)"  id="five">5</button>
+            <button onclick="appendTomain(`6`)"  id="six">6</button>
+            <button onclick="appendTomain(`7`)"  id="seven">7</button>
+            <button onclick="appendTomain(`8`)"  id="eight">8</button>
+            <button onclick="appendTomain(`9`)"  id="nine">9</button>
+            <button onclick="appendTomain(`0`)"  id="zero">0</button>
+            <button onclick="appendTomain(`.`)"  id="clc">.</button>
+            <button onclick="appendTomain(`+`)"  id="sum">+</button>
+            <button onclick="appendTomain(`-`)"  id="sub">-</button>
+            <button onclick="appendTomain(`*`)"  id="multi">*</button>
+            <button onclick="appendTomain(`/`)"  id="div">%</button>
+            <button onclick="colculate(`=`)"  id="ans">=</button>
+            <button onclick="cle(`c`)"  id="clc">C</button>
+
+        </div>
+    </div>
+  <script>
+    const display = document.getElementById("inp");
+    function appendTomain(input){
+display.value +=input;
+
+    }function cle(){
+        display.value = "";
+    }
+    function colculate(){
+        display.value = eval(display.value);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUess</title>
+</head>
+<style>
+    body{
+        display: flex;
+        background: #a4a2a7;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    #h1{
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: 700;
+        font-family: fantasy;
+        font-weight: 200;
+        color: rgb(31, 31, 22);
+    }
+    #submit{
+        height: 35px;
+        width: 100px;
+        background: hsl(207, 81%, 61%);
+        border-radius: 5px;
+        border: none;
+        margin-top: 20px;
+    }
+    input{
+        height: 25px;
+        background: #f1e6ed;
+        border: none;
+    }
+    label{
+        font-size: larger;
+        margin: 10px;
+    }
+    h3{
+        color: rgb(55, 105, 4);
+    }
+</style>
+<body>
+    <h1 id="h1">Guess the nuber between 1 to 100 ❓.</h1>
+    <label for="number" id="num">Enter number 🔢:</label>
+    <input type="number" id="match">
+    <button id="submit">submit</button><br>
+    <h3 id="h3">Your guess ? </h3>
+</body>
+<script>
+    let n;
+    
+    n = Math.floor(Math.random()*100);
+    document.getElementById("submit").onclick = function(){
+        m = document.getElementById("match").value;
+        
+            
+            if (n>m) {
+            h3.textContent = "your guess is low";  
+            } 
+            else if (n<m) {
+                h3.textContent = "your guess is up";  
+            }
+            else if(n==m) {
+           h3.textContent = `you got ${m}`;
+        }
+        }
+    
+</script>
+</html>
